@@ -6,7 +6,7 @@ edition = "2018"
 
 [dependencies]
 juniper_actix = "0.2.1"
-juniper = { version = "0.15.1", features = ["expose-test-schema"] }
+juniper = "0.15.1"
 actix-web = "4.0.0-beta.2"
 actix-cors = "0.5.3"
 tracing = "0.1.22"
@@ -15,11 +15,11 @@ dotenv = "0.15.0"
 async-trait = "0.1.42"
 base64 = "0.13.0"
 
+[dependencies.sushii-model]
+path = "../sushii-model"
+features = ["graphql"]
+
 [dependencies.sqlx]
 version = "0.5"
 default-features = false
 features = [ "runtime-tokio-rustls", "macros", "postgres", "json", "chrono", "offline", "migrate", "decimal" ]
-
-[dependencies.sushii-model]
-path = "../sushii-model"
-features = ["graphql"]
